@@ -6,6 +6,11 @@ import { ActionSheetPage } from '../pages/action-sheet/action-sheet'
 import { AlertPage } from '../pages/alert/alert';
 import { ButtonPage } from '../pages/button/button';
 import { CardPage } from '../pages/card/card';
+import { DateTimePage } from '../pages/datetime/datetime';
+import { FABsPage } from '../pages/fabs/fabs';
+import { GesturesPage } from '../pages/gestures/gestures';
+import { IconsPage } from '../pages/icons/icons';
+import { InputsPage } from '../pages/inputs/inputs';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,9 +18,9 @@ import { CardPage } from '../pages/card/card';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = CardPage;  // start page
+  rootPage: any = InputsPage;  // start page
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
@@ -25,7 +30,12 @@ export class MyApp {
       { title: 'Action Sheet', component: ActionSheetPage },
       { title: 'Alert', component: AlertPage },
       { title: 'Button', component: ButtonPage },
-      { title: 'Card', component: CardPage }
+      { title: 'Card', component: CardPage },
+      { title: 'DateTime', component: DateTimePage },
+      { title: 'FABs', component: FABsPage },
+      { title: 'Gestures', component: GesturesPage },
+      { title: 'Icons', component: IconsPage },
+      { title: 'Inputs', component: InputsPage },
     ];
 
   }

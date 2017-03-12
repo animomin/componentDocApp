@@ -7,6 +7,12 @@ import { ButtonPage } from '../pages/button/button';
 import { CardPage } from '../pages/card/card';
 import { BackgroundCardPage } from '../pages/card/bg-card/bg-card';
 import { SocialCardPage } from '../pages/card/social-card/social-card';
+import { DateTimePage } from '../pages/datetime/datetime';
+import { FABsPage } from '../pages/fabs/fabs';
+import { GesturesPage } from '../pages/gestures/gestures';
+import { IconsPage } from '../pages/icons/icons';
+import { InputsPage } from '../pages/inputs/inputs';
+import { SuccessPage } from '../pages/inputs/success/success';
 
 @NgModule({
   declarations: [
@@ -14,9 +20,15 @@ import { SocialCardPage } from '../pages/card/social-card/social-card';
     ActionSheetPage,
     AlertPage,
     ButtonPage,
-    CardPage,    
+    CardPage,
     BackgroundCardPage,
-    SocialCardPage
+    SocialCardPage,
+    DateTimePage,
+    FABsPage,
+    GesturesPage,
+    IconsPage,
+    InputsPage,
+    SuccessPage
 
   ],
   imports: [
@@ -30,7 +42,13 @@ import { SocialCardPage } from '../pages/card/social-card/social-card';
     ButtonPage,
     CardPage,
     BackgroundCardPage,
-    SocialCardPage
+    SocialCardPage,
+    DateTimePage,
+    FABsPage,
+    GesturesPage,
+    IconsPage,
+    InputsPage,
+    SuccessPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
