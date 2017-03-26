@@ -11,6 +11,9 @@ import { FABsPage } from '../pages/fabs/fabs';
 import { GesturesPage } from '../pages/gestures/gestures';
 import { IconsPage } from '../pages/icons/icons';
 import { InputsPage } from '../pages/inputs/inputs';
+import { ListsPage } from '../pages/lists/lists';
+import { LoadingPage } from '../pages/loading/loading';
+import { ModalsPage } from '../pages/modals/modals';
 
 @Component({
   templateUrl: 'app.html'
@@ -18,7 +21,7 @@ import { InputsPage } from '../pages/inputs/inputs';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = InputsPage;  // start page
+  rootPage: any = LoadingPage;  // start page
 
   pages: Array<{ title: string, component: any }>;
 
@@ -36,6 +39,10 @@ export class MyApp {
       { title: 'Gestures', component: GesturesPage },
       { title: 'Icons', component: IconsPage },
       { title: 'Inputs', component: InputsPage },
+      { title: 'Lists', component: ListsPage },
+      { title: 'Loading', component: LoadingPage },
+      { title: 'Modals', component: ModalsPage }
+      
     ];
 
   }
@@ -52,6 +59,8 @@ export class MyApp {
   openPage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+    this.nav.setRoot(page.component, {
+      pageTitle : page.title
+    });
   }
 }

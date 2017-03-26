@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { AlertController } from 'ionic-angular';
+import { NavParams } from 'ionic-angular';
 
 @Component({
   templateUrl: 'alert.html'
 })
 export class AlertPage {
-
-  constructor(public alertCtrl: AlertController) {
-
+  title : string = '';
+  constructor(public navParams: NavParams, public alertCtrl: AlertController) {
+    this.title = navParams.get('pageTitle');
   }
 
   showBasicAlert() {

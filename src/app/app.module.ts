@@ -13,6 +13,11 @@ import { GesturesPage } from '../pages/gestures/gestures';
 import { IconsPage } from '../pages/icons/icons';
 import { InputsPage } from '../pages/inputs/inputs';
 import { SuccessPage } from '../pages/inputs/success/success';
+import { ListsPage } from '../pages/lists/lists';
+import { DetailPage } from '../pages/lists/detail/detail';
+import { LoadingPage } from '../pages/loading/loading';
+import { ModalsPage, ModalDetailPage } from '../pages/modals/modals';
+
 
 @NgModule({
   declarations: [
@@ -28,8 +33,12 @@ import { SuccessPage } from '../pages/inputs/success/success';
     GesturesPage,
     IconsPage,
     InputsPage,
-    SuccessPage
-
+    SuccessPage,
+    ListsPage,
+    DetailPage,
+    LoadingPage,
+    ModalsPage,
+    ModalDetailPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -48,7 +57,12 @@ import { SuccessPage } from '../pages/inputs/success/success';
     GesturesPage,
     IconsPage,
     InputsPage,
-    SuccessPage
+    SuccessPage,
+    ListsPage,
+    DetailPage,
+    LoadingPage,
+    ModalsPage,
+    ModalDetailPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
